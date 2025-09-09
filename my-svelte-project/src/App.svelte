@@ -1,16 +1,7 @@
 <script>
-  let search = '';
-  let countries = ['USA','Canada','France','Germany','Japan','Brazil'];
-  $: filtered = countries.filter(c => c.toLowerCase().includes(search.toLowerCase()));
-  let selected = '';
+  let name = '';
 </script>
 
-<input type="text" bind:value={search} placeholder="Search countries..."/>
+<input type="text" bind:value={name} placeholder="Enter your name"/>
 
-<select bind:value={selected} size="5">
-  {#each filtered as country}
-    <option value={country}>{country}</option>
-  {/each}
-</select>
-
-<p>Selected: {selected}</p>
+<p>Selected: {name}</p>
