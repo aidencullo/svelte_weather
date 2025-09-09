@@ -1,7 +1,14 @@
 <script>
-  let name = '';
+  let counter = $state(0)
+  const increment = () => {
+    counter += 1
+  }
+  const decrement = () => {
+    counter -= 1
+  }
 </script>
 
-<input type="text" bind:value={name} placeholder="Enter your name"/>
+<p>Counter: {counter}</p>
 
-<p>Selected: {name}</p>
+<button onclick={increment}>Increment</button>
+<button onclick={decrement}>Decrement</button>
